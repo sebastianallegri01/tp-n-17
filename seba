@@ -1,0 +1,28 @@
+#include <iostream>
+
+unsigned long long factorial(int n) {
+    if (n == 0) {
+        return 1;
+    }
+
+    unsigned long long resultado = 1;
+
+    for (int i = 1; i <= n; i++) {
+        resultado *= i;
+    }
+
+    return resultado;
+}
+
+int main() {
+    int numero;
+
+    std::cout << "Ingrese un número: ";
+    std::cin >> numero;
+
+    unsigned long long factorialNumero = factorial(numero);
+
+    std::cout << "El factorial de " << numero << " es: " << factorialNumero << std::endl;
+
+    return 0;
+}
